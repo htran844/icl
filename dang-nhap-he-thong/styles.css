@@ -1,0 +1,92 @@
+/* Nhúng font OTF */
+@font-face {
+  font-family: 'SFProRegular';
+  src: url('../fonts/SFProText-Regular.otf') format('opentype');
+}
+
+/* Sử dụng font đã nhúng */
+.custom-font {
+  font-family: 'SFProRegular', sans-serif;
+  font-size: 24px;
+  color: #333;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Modal background */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: flex-end; /* Align to the bottom */
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background-color: #fff;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(100%); /* Start below the viewport */
+    transition: transform 0.2s ease-out; /* Smooth transition */
+  }
+  
+  /* Modal background fade-in */
+  .modal.show {
+    display: flex;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  /* Modal content slide-up */
+  .modal-content.show {
+    transform: translateY(0); /* Fully visible */
+  }
+  
+  /* Modal content slide-down */
+  .modal-content.hide {
+    transform: translateY(100%);
+    transition: transform 0.2s ease-in; /* Smooth transition for closing */
+  }
+  
+  /* Close button */
+  .close {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  
