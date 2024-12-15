@@ -113,8 +113,15 @@ maKichHoat.addEventListener('input', () => {
 // Lắng nghe sự kiện click vào "Tiếp" khi nó có trạng thái active
 tiepModal.addEventListener('click', () => {
   if (tiepModal.classList.contains('active')) {
-    
-    const loadingModal = document.getElementById('loadingModal');
+    fetch('https://675e4dbb63b05ed07979e3ce.mockapi.io/code')
+    .then(response => response.json())
+    .then(data => {
+      // Check if the code exists in the API
+      const kichHoatCodeInput = document.getElementById('maKichHoat').value.trim();
+      const isValidCode = data.some(item => item.maKichHoat=== kichHoatCodeInput);
+
+      if (isValidCode) {
+        const loadingModal = document.getElementById('loadingModal');
         loadingModal.style.display = 'flex';
 
         let progress = 0;
@@ -132,10 +139,19 @@ tiepModal.addEventListener('click', () => {
             setTimeout(function () {
               // Hide the loading modal after the progress reaches 100%
               loadingModal.style.display = 'none';
+              progressBar.style.width = 0 + '%';
               showModal()
             }, 500); // Delay before hiding
           }
         }, 50); // Adjust speed of progress update
-    // window.location.href = '/mo-khoa-icloud';
+
+      } else {
+        alert('Mã kích hoạt không chính xác, vui lòng kiểm tra lại!');
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+      alert('Đã xảy ra lỗi, vui lòng thử lại sau!');
+    });
   }
 });
