@@ -17,7 +17,7 @@ fetch('https://675e4dbb63b05ed07979e3ce.mockapi.io/products')
      // Add event listener to the button
      const button = listItem.querySelector('.btn-choose');
      button.addEventListener('click', () => {
-       window.location.href = '/dang-nhap-he-thong/index.html';
+       window.location.href = '/icl/dang-nhap-he-thong/index.html';
      });
     productList.appendChild(listItem);
   });
