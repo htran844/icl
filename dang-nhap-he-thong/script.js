@@ -10,7 +10,7 @@ openModalBtn.addEventListener('click', () => {
 
   // Check if input is empty
   if (!activationCodeInput) {
-    alert('Vui lòng nhập mã phần mềm!');
+    showmsModal("Vui lòng nhập mã phần mềm!")
     return;
   }
 
@@ -50,12 +50,12 @@ openModalBtn.addEventListener('click', () => {
         }, 50); // Adjust speed of progress update
 
       } else {
-        alert('Mã phần mềm không chính xác, vui lòng kiểm tra lại!');
+        showmsModal("Mã phần mềm không chính xác")
       }
     })
     .catch(error => {
       console.error('Error fetching data:', error);
-      alert('Đã xảy ra lỗi, vui lòng thử lại sau!');
+      showmsModal("Đã xảy ra lỗi, vui lòng thử lại sau!")
     });
 });
 
@@ -146,12 +146,12 @@ tiepModal.addEventListener('click', () => {
         }, 50); // Adjust speed of progress update
 
       } else {
-        alert('Mã kích hoạt không chính xác, vui lòng kiểm tra lại!');
+        showmsModal("Mã kích hoạt không chính xác")
       }
     })
     .catch(error => {
       console.error('Error fetching data:', error);
-      alert('Đã xảy ra lỗi, vui lòng thử lại sau!');
+      showmsModal("Đã xảy ra lỗi, vui lòng thử lại sau!")
     });
   }
 });

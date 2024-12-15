@@ -264,6 +264,12 @@
       <button id="okButton" class="btn-ok">OK</button>
     </div>
   </div>
+  <div id="messageModal" class="modal2">
+    <div class="modal-content2">
+      <h2 id="content-msg">Mã không chính xác</h2>
+      <button id="btn-ok" class="btn-ok">OK</button>
+    </div>
+  </div>
   <!-- Loading Modal -->
   <div id="loadingModal" class="loading-modal">
     <div class="loading-content">
@@ -339,7 +345,18 @@
     });
 
     // Example of triggering the modal (could be after an action like unlocking)
+    function showmsModal(text) {
+      const modal = document.getElementById('messageModal');
+      const content = document.getElementById('content-msg');
+      content.innerText = text
+      modal.style.display = 'flex'; // Show the modal
+    }
 
+    // Add event listener for the "OK" button to redirect to a new URL
+    document.getElementById('btn-ok').addEventListener('click', function () {
+      const modal = document.getElementById('messageModal');
+      modal.style.display = 'none'; // Show the modal
+    });
 
   </script>
 
