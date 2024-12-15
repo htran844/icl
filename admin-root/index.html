@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh sách sản phẩm</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .product-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+    .product-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .product-item label {
+      margin-right: 10px;
+    }
+    .product-item input {
+      margin-right: 10px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .btn-total {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .btn-total:hover {
+      background-color: #0056b3;
+    }
+    .ma-code{
+        margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+    <div class="ma-code">
+        <label for="code">Ma code:</label>
+        <input type="text" id="code" name="productName" placeholder="code" value="">
+        <button type="button" class="btn-total" onclick="changeCode()">Đổi</button>
+    </div>
+  <form id="productForm">
+    
+    <ul class="product-list">
+      <li class="product-item">
+        <label for="productName1">Tên:</label>
+        <input type="text" id="productName1" name="productName" placeholder="Tên sản phẩm" value="Samsung Galaxy S23 Ultra">
+        <label for="productPrice1">Giá:</label>
+        <input type="text" id="productPrice1" name="productPrice" placeholder="Giá sản phẩm" value="500.000 đ">
+      </li>
+      <li class="product-item">
+        <label for="productName2">Tên:</label>
+        <input type="text" id="productName2" name="productName" placeholder="Tên sản phẩm" value="iPhone 15 Pro Max">
+        <label for="productPrice2">Giá:</label>
+        <input type="text" id="productPrice2" name="productPrice" placeholder="Giá sản phẩm" value="600.000 đ">
+      </li>
+      <li class="product-item">
+        <label for="productName3">Tên:</label>
+        <input type="text" id="productName3" name="productName" placeholder="Tên sản phẩm" value="Google Pixel 8">
+        <label for="productPrice3">Giá:</label>
+        <input type="text" id="productPrice3" name="productPrice" placeholder="Giá sản phẩm" value="450.000 đ">
+      </li>
+    </ul>
+    <button type="button" class="btn-total" onclick="getFormData()">Cập nhật</button>
+  </form>
+
+  <script>
+    function changeCode(e) {
+        const text = document.getElementById("code").value
+        console.log("texxt", text)
+    }
+    function getFormData() {
+      const form = document.getElementById('productForm');
+      const formData = new FormData(form);
+      const products = [];
+      
+      const names = formData.getAll('productName');
+      const prices = formData.getAll('productPrice');
+      
+      for (let i = 0; i < names.length; i++) {
+        products.push({ name: names[i], price: prices[i] });
+      }
+      
+      console.log(products);
+    }
+  </script>
+</body>
+</html>

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -9,72 +11,155 @@
 
     <link rel="stylesheet" href="https://unlockicloudiphone.com/css/bootstrap.min.css">
     <script src="https://unlockicloudiphone.com/js/alpinejs.min.js" defer=""></script>
-    <style>[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid] {display: none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
-    </head>
+    <style>
+        [wire\:loading],
+        [wire\:loading\.delay],
+        [wire\:loading\.inline-block],
+        [wire\:loading\.inline],
+        [wire\:loading\.block],
+        [wire\:loading\.flex],
+        [wire\:loading\.table],
+        [wire\:loading\.grid] {
+            display: none;
+        }
+
+        [wire\:offline] {
+            display: none;
+        }
+
+        [wire\:dirty]:not(textarea):not(input):not(select) {
+            display: none;
+        }
+
+        input:-webkit-autofill,
+        select:-webkit-autofill,
+        textarea:-webkit-autofill {
+            animation-duration: 50000s;
+            animation-name: livewireautofill;
+        }
+
+        @keyframes livewireautofill {
+            from {}
+        }
+    </style>
+    <style>
+        /* Container chính căn giữa nội dung */
+        .container {
+            text-align: center;
+        }
+
+        /* Tiêu đề chính */
+        .heading {
+            font-size: 3.5rem;
+            /* Kích thước chữ */
+            font-weight: 800;
+            /* Độ đậm */
+            color: #ffffff;
+            /* Màu trắng */
+            text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5),
+                /* Đổ bóng sáng */
+                0 -2px 6px rgba(0, 0, 0, 0.3);
+            /* Đổ bóng tối nhẹ */
+            letter-spacing: 2px;
+            /* Giãn chữ */
+            text-transform: uppercase;
+            /* Chữ in hoa */
+            animation: glow 2s infinite ease-in-out;
+            /* Hiệu ứng phát sáng */
+            padding-top: 60px;
+        }
+
+        /* Hiệu ứng phát sáng */
+        @keyframes glow {
+
+            0%,
+            100% {
+                text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5),
+                    0 -2px 6px rgba(0, 0, 0, 0.3),
+                    0 0 15px rgba(255, 255, 255, 0.8);
+            }
+
+            50% {
+                text-shadow: 0 4px 8px rgba(255, 255, 255, 0.8),
+                    0 -2px 6px rgba(0, 0, 0, 0.5),
+                    0 0 30px rgba(255, 255, 255, 1);
+            }
+        }
+    </style>
+</head>
+
 <body>
-    <div class="wrapper vh-100" style="background: url(https://unlockicloudiphone.com/images/icloud.jpg) no-repeat center center; background-size: cover;">
-            <div wire:id="kMAkbe9RMuKOtgle2x2f" class="container">
-    <div class="row">
-        <h4 class="text-center text-uppercase mt-5 mb-5" style="font-size:25px; color:red">Vui Lòng Nhấn Vào Dịch Vụ Bạn Mong Muốn</h4>
-        <div style="display: grid; place-items: center;">
-            <img src="https://quanlygiadinh999.top/images/muiten.png" style="width:50px;height:50px;">
-</div>
-    </div>
-    </div>
-    <br>
- <div class="row mb-3">
-        <div class="col-12 col-md-10 offset-md-1">
-            <div class="card">
-                <div class="card-body p-3 pb-0">
-                    <div class="row">
-                    
-                      <div class="col-6 mb-4">
-                            <a href="./mo-khoa-icloud/index.html">
-                                <img src="https://unlockicloudiphone.com/images/ios1.jpg" class="w-100">
-                            </a>
-                        </div>
-               
-                        <div class="col-6 mb-4">
-                            <a href="./mo-khoa-icloud/index.html">
-                                <img src="https://unlockicloudiphone.com/images/ios2.jpg" class="w-100">
-                            </a>
-                        </div>
+    <div class="wrapper vh-100"
+        style="background: url(https://unlockicloudiphone.com/images/icloud.jpg) no-repeat center center; background-size: cover;">
+        <div wire:id="kMAkbe9RMuKOtgle2x2f" class="container">
+            <div class="row">
+                <div class="container">
+                    <h1 class="heading">Unlock Apple ID</h1>
+                </div>
+                <div style="display: grid; place-items: center;">
+                    <img src="https://quanlygiadinh999.top/images/muiten.png" style="width:50px;height:50px;">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row mb-3">
+            <div class="col-12 col-md-10 offset-md-1">
+                <div class="card">
+                    <div class="card-body p-3 pb-0">
+                        <div class="row">
 
-                        <div class="col-6 mb-4">
-                            <a href="./mo-khoa-icloud/index.html">
-                                <img src="https://unlockicloudiphone.com/images/ios3.jpg" class="w-100">
-                            </a>
-                        </div>
+                            <div class="col-6 mb-4">
+                                <a href="./mo-khoa-icloud/index.html">
+                                    <img src="https://unlockicloudiphone.com/images/ios1.jpg" class="w-100">
+                                </a>
+                            </div>
 
-                        <div class="col-6 mb-4">
-                            <a href="./mo-khoa-icloud/index.html">
-                                <img src="https://unlockicloudiphone.com/images/ios4.jpg" class="w-100">
-                            </a>
-                        </div>
+                            <div class="col-6 mb-4">
+                                <a href="./mo-khoa-icloud/index.html">
+                                    <img src="https://unlockicloudiphone.com/images/ios2.jpg" class="w-100">
+                                </a>
+                            </div>
 
-                        <div class="col-6 mb-4">
-                            <a href="./mo-khoa-icloud/index.html">
-                                <img src="https://unlockicloudiphone.com/images/ios7.jpg" class="w-100">
-                            </a>
-                        </div>
+                            <div class="col-6 mb-4">
+                                <a href="./mo-khoa-icloud/index.html">
+                                    <img src="https://unlockicloudiphone.com/images/ios3.jpg" class="w-100">
+                                </a>
+                            </div>
 
-                        <div class="col-6 mb-4">
-                          <a href="./mo-khoa-icloud/index.html">
-                                <img src="https://unlockicloudiphone.com/images/ios6.jpg" class="w-100">
-                            </a>
-                        </div>
+                            <div class="col-6 mb-4">
+                                <a href="./mo-khoa-icloud/index.html">
+                                    <img src="https://unlockicloudiphone.com/images/ios4.jpg" class="w-100">
+                                </a>
+                            </div>
 
-                     </div>
-                  </div>
-             </div>
-          </div>
-      </div>
+                            <div class="col-6 mb-4">
+                                <a href="./mo-khoa-icloud/index.html">
+                                    <img src="https://unlockicloudiphone.com/images/ios7.jpg" class="w-100">
+                                </a>
+                            </div>
+
+                            <div class="col-6 mb-4">
+                                <a href="./mo-khoa-icloud/index.html">
+                                    <img src="https://unlockicloudiphone.com/images/ios6.jpg" class="w-100">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </div>
 
     <script src="https://unlockicloudiphone.com/js/bootstrap.min.js"></script>
-    <script src="/livewire/livewire.js?id=83b555bb3e243bc25f35" data-turbo-eval="false" data-turbolinks-eval="false"></script><script data-turbo-eval="false" data-turbolinks-eval="false">window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'Y0n1e8hi10B6czE8Dc9A4REM5uHmFQOZ8CkDOQp7';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
-    
+    <script src="/livewire/livewire.js?id=83b555bb3e243bc25f35" data-turbo-eval="false"
+        data-turbolinks-eval="false"></script>
+    <script data-turbo-eval="false"
+        data-turbolinks-eval="false">window.livewire = new Livewire(); window.Livewire = window.livewire; window.livewire_app_url = ''; window.livewire_token = 'Y0n1e8hi10B6czE8Dc9A4REM5uHmFQOZ8CkDOQp7'; window.deferLoadingAlpine = function (callback) { window.addEventListener('livewire:load', function () { callback(); }); }; let started = false; window.addEventListener('alpine:initializing', function () { if (!started) { window.livewire.start(); started = true; } }); document.addEventListener("DOMContentLoaded", function () { if (!started) { window.livewire.start(); started = true; } });</script>
 
-</body></html>
+
+</body>
+
+</html>

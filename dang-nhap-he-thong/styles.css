@@ -3,6 +3,14 @@
   font-family: 'SFProRegular';
   src: url('../fonts/SFProText-Regular.otf') format('opentype');
 }
+@font-face {
+  font-family: 'SFProSemibold';
+  src: url('../fonts/SFProText-Semibold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'SFProThin';
+  src: url('../fonts/SFProText-Thin.otf') format('opentype');
+}
 
 /* Sử dụng font đã nhúng */
 .custom-font {
@@ -41,6 +49,7 @@ body {
     z-index: 1000;
     justify-content: center;
     align-items: flex-end; /* Align to the bottom */
+    font-family: 'SFProThin', sans-serif;
   }
   
   /* Modal content */
@@ -53,6 +62,7 @@ body {
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(100%); /* Start below the viewport */
     transition: transform 0.2s ease-out; /* Smooth transition */
+    height: 90%;
   }
   
   /* Modal background fade-in */
@@ -79,7 +89,95 @@ body {
     font-weight: bold;
     cursor: pointer;
   }
-  
+  .modal-head{
+    display: flex;
+    justify-content: space-between;
+  }
+  .head-huy{
+    color: #007bff;
+  }
+  .id-apple{
+    font-size: 34px;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .dang-nhap-bang{
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .horizontal-input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-top: 1px solid #ccc; /* Đường viền trên */
+    border-bottom: 1px solid #ccc; /* Đường viền dưới */
+    margin-top: 48px;
+  }
+
+  /* Label */
+  .horizontal-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px; /* Khoảng cách giữa label và input */
+    font-family: 'SFProRegular', sans-serif;
+  }
+
+  /* Input */
+  .horizontal-input {
+    flex: 1;
+    padding: 10px;
+    border: none; /* Xóa viền mặc định của input */
+    font-size: 16px;
+    outline: none; /* Loại bỏ viền focus mặc định */
+  }
+
+  /* Placeholder hiệu ứng */
+  .horizontal-input::placeholder {
+    color: #aaa;
+    /* font-style: italic; */
+  }
+
+  /* Hiệu ứng khi focus vào input */
+  .horizontal-input:focus {
+    background-color: #f9f9f9; /* Tô màu nền nhẹ khi focus */
+  }
+  .ban-khong-co{
+    text-align: center;
+    color: #007bff;
+    margin-top: 24px;
+  }
+  .icon-apple{
+    margin-top: 36px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .img-apple{
+    width: 48px;
+    height: 48px;
+  }
+  .icon-bottom{
+    text-align: center;
+  }
+  .icon-bottom > img{
+    width: 30px;
+    height: 24px;
+  }
+  .text-bottom{
+    font-size: 14px;
+    text-align: center;
+  }
+  .text2{
+    color: #007bff;
+  }
+  .head-tiep.active {
+    color: #007bff;
+  }
+  .head-tiep.inactive {
+    color: gray;
+  }
   /* Animations */
   @keyframes fadeIn {
     from {
