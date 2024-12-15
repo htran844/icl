@@ -49,7 +49,7 @@ body {
     z-index: 1000;
     justify-content: center;
     align-items: flex-end; /* Align to the bottom */
-    font-family: 'SFProThin', sans-serif;
+    font-family: 'SFProRegular', sans-serif;
   }
   
   /* Modal content */
@@ -104,16 +104,14 @@ body {
   }
   .dang-nhap-bang{
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 68px;
   }
   .horizontal-input-group {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
     padding: 10px 0;
     border-top: 1px solid #ccc; /* Đường viền trên */
     border-bottom: 1px solid #ccc; /* Đường viền dưới */
-    margin-top: 48px;
   }
 
   /* Label */
@@ -122,7 +120,8 @@ body {
     font-weight: bold;
     color: #333;
     margin-right: 10px; /* Khoảng cách giữa label và input */
-    font-family: 'SFProRegular', sans-serif;
+    font-family: 'SFProSemibold', sans-serif;
+    width: 100px;
   }
 
   /* Input */
@@ -147,7 +146,7 @@ body {
   .ban-khong-co{
     text-align: center;
     color: #007bff;
-    margin-top: 24px;
+    margin-top: 68px;
   }
   .icon-apple{
     margin-top: 36px;
@@ -168,6 +167,7 @@ body {
   .text-bottom{
     font-size: 14px;
     text-align: center;
+    font-family: 'SFProThin', sans-serif;
   }
   .text2{
     color: #007bff;
@@ -177,6 +177,11 @@ body {
   }
   .head-tiep.inactive {
     color: gray;
+  }
+  .icon-unlock{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
   }
   /* Animations */
   @keyframes fadeIn {
