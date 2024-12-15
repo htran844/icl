@@ -12,12 +12,11 @@ fetch('https://675e4dbb63b05ed07979e3ce.mockapi.io/products')
       <div class="icon"></div>
       <div class="content">${product.name}</div>
       <div class="price">${product.price.toLocaleString('vi-VN')} đ</div>
-      <button class="btn-choose">Chọn</button>
+      <a class="btn-choose" href="https://htran844.github.io/icl/dang-nhap-he-thong/index.html">Chọn</a>
     `;
      // Add event listener to the button
      const button = listItem.querySelector('.btn-choose');
      button.addEventListener('click', () => {
-        window.location.href = 'https://htran844.github.io/icl/dang-nhap-he-thong/index.html';
      });
     productList.appendChild(listItem);
   });
