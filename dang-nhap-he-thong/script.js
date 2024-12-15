@@ -70,8 +70,7 @@ appleIdInput.addEventListener('input', () => {
 // Lắng nghe sự kiện click vào "Tiếp" khi nó có trạng thái active
 tiepModal.addEventListener('click', () => {
   if (tiepModal.classList.contains('active')) {
-    alert('Mở khóa thành công');
-    // Sau khi hiển thị thông báo, chuyển hướng đến trang "/mo-khoa-icloud"
-    window.location.href = '/mo-khoa-icloud';
+    showModal()
+    // window.location.href = '/mo-khoa-icloud';
   }
 });
